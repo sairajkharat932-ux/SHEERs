@@ -10,17 +10,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="description"
-        content="SHEERs — Building intelligent electrical technologies for a smarter, more efficient future."
-    >
-
-    <meta
-        name="theme-color"
-        content="#061A36"
-    >
-
-    <title>SHEERs | Intelligent Electrical Technologies</title>
+    <title>SHEERs Simulator</title>
 
     <link
         rel="stylesheet"
@@ -36,144 +26,42 @@
 
 
     <!-- =====================================================
-         NAVIGATION
+         HEADER
          ===================================================== -->
 
-    <header class="site-header">
+    <header class="app-header">
 
-        <nav class="main-nav">
+        <div class="brand">
 
-            <!-- BRAND -->
-
-            <a
-                href="#home"
-                class="site-brand"
+            <img
+                src="assets/sheers-logo.png"
+                alt="SHEERs Logo"
+                class="brand-logo"
             >
 
-                <img
-                    src="assets/sheers-logo.png"
-                    alt="SHEERs Logo"
-                    class="site-logo"
-                >
+            <div class="brand-text">
 
-                <div class="site-brand-text">
+                <h1>SHEERs</h1>
 
-                    <strong>SHEERs</strong>
-
-                    <span>
-                        Power Smarter. Save Better.
-                    </span>
-
-                </div>
-
-            </a>
-
-
-            <!-- DESKTOP NAVIGATION -->
-
-            <div class="nav-links">
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#story">
-                    Our Story
-                </a>
-
-                <a href="#products">
-                    Products
-                </a>
-
-                <a href="#team">
-                    Team
-                </a>
-
-                <a href="#achievements">
-                    Achievements
-                </a>
-
-                <a href="#gallery">
-                    Gallery
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
+                <p>
+                    Power Smarter. Save Better.
+                </p>
 
             </div>
 
-
-            <!-- SEARCH -->
-
-            <button
-                class="nav-search"
-                id="openSearch"
-                aria-label="Search SHEERs"
-            >
-
-                <span>
-                    SEARCH
-                </span>
-
-                <span>
-                    /
-                </span>
-
-            </button>
+        </div>
 
 
-            <!-- MOBILE MENU -->
+        <div class="system-status">
 
-            <button
-                class="mobile-menu-button"
-                id="mobileMenuButton"
-                aria-label="Open navigation menu"
-            >
+            <span
+                class="status-indicator"
+                id="statusIndicator"
+            ></span>
 
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </nav>
-
-
-        <!-- MOBILE NAVIGATION -->
-
-        <div
-            class="mobile-nav"
-            id="mobileNav"
-        >
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#story">
-                Our Story
-            </a>
-
-            <a href="#products">
-                Products
-            </a>
-
-            <a href="#team">
-                Team
-            </a>
-
-            <a href="#achievements">
-                Achievements
-            </a>
-
-            <a href="#gallery">
-                Gallery
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
+            <span id="systemStatus">
+                SIMULATION READY
+            </span>
 
         </div>
 
@@ -182,742 +70,513 @@
 
 
     <!-- =====================================================
-         SEARCH OVERLAY
+         MAIN APPLICATION
          ===================================================== -->
 
-    <div
-        class="search-overlay"
-        id="searchOverlay"
-    >
+    <main class="main-content">
 
-        <div class="search-container">
 
-            <button
-                class="search-close"
-                id="closeSearch"
-                aria-label="Close search"
-            >
-                ×
-            </button>
+        <!-- =================================================
+             WELCOME STATE
+             ================================================= -->
 
-            <p class="section-eyebrow">
-                SHEERs SEARCH
-            </p>
+        <section
+            id="welcomeState"
+            class="application-state active-state"
+        >
 
-            <h2>
-                What are you looking for?
-            </h2>
+            <div class="welcome-section">
 
-            <div class="search-input-wrapper">
+                <p class="eyebrow">
+                    INTELLIGENT POWER MANAGEMENT
+                </p>
 
-                <input
-                    type="search"
-                    id="productSearch"
-                    placeholder="Search products, technology, stories..."
-                    autocomplete="off"
+
+                <h2>
+
+                    SHEERs
+
+                    <span>
+                        Simulation Platform
+                    </span>
+
+                </h2>
+
+
+                <p class="welcome-description">
+
+                    Explore how intelligent power factor
+                    correction can improve the electrical
+                    performance of a connected load.
+
+                </p>
+
+
+                <button
+                    id="startSimulation"
+                    class="primary-button"
                 >
 
-                <span>
-                    /
-                </span>
+                    Start Simulation
+
+                </button>
 
             </div>
 
-            <div
-                class="search-results"
-                id="searchResults"
-            ></div>
+        </section>
+
+
+
+        <!-- =================================================
+     RUNNING STATE — FACTORY SCENARIO
+     ================================================= -->
+
+<section
+    id="runningState"
+    class="application-state"
+>
+
+    <div class="factory-container">
+
+        <!-- Factory Header -->
+
+        <div class="factory-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    INDUSTRIAL LOAD SIMULATION
+                </p>
+
+                <h2>
+                    Factory Power System
+                </h2>
+
+                <p class="state-description">
+
+                    Three common industrial loads are
+                    operating simultaneously. Watch how
+                    the electrical demand changes.
+
+                </p>
+
+            </div>
+
+
+            <div class="factory-status">
+
+                <span class="factory-status-dot"></span>
+
+                FACTORY ONLINE
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Main Factory Area -->
+
+        <div class="factory-layout">
+
+
+            <!-- LOADS -->
+
+            <div class="loads-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="panel-label">
+                            CONNECTED LOADS
+                        </span>
+
+                        <h3>
+                            Industrial Equipment
+                        </h3>
+
+                    </div>
+
+                    <span class="load-count">
+                        03 LOADS
+                    </span>
+
+                </div>
+
+
+
+                <!-- Motor -->
+
+                <div class="load-card">
+
+                    <div class="load-icon">
+                        M
+                    </div>
+
+                    <div class="load-information">
+
+                        <div class="load-title-row">
+
+                            <strong>
+                                Induction Motor
+                            </strong>
+
+                            <span class="load-running">
+                                RUNNING
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Production drive
+                        </p>
+
+                        <div class="load-bar">
+
+                            <span
+                                style="width: 82%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+                    <strong class="load-power">
+                        22 kW
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Compressor -->
+
+                <div class="load-card">
+
+                    <div class="load-icon">
+                        C
+                    </div>
+
+                    <div class="load-information">
+
+                        <div class="load-title-row">
+
+                            <strong>
+                                Air Compressor
+                            </strong>
+
+                            <span class="load-running">
+                                RUNNING
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Pneumatic system
+                        </p>
+
+                        <div class="load-bar">
+
+                            <span
+                                style="width: 68%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+                    <strong class="load-power">
+                        18 kW
+                    </strong>
+
+                </div>
+
+
+
+                <!-- Pump -->
+
+                <div class="load-card">
+
+                    <div class="load-icon">
+                        P
+                    </div>
+
+                    <div class="load-information">
+
+                        <div class="load-title-row">
+
+                            <strong>
+                                Industrial Pump
+                            </strong>
+
+                            <span class="load-running">
+                                RUNNING
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Cooling & circulation
+                        </p>
+
+                        <div class="load-bar">
+
+                            <span
+                                style="width: 56%"
+                            ></span>
+
+                        </div>
+
+                    </div>
+
+                    <strong class="load-power">
+                        10 kW
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ELECTRICAL CONDITION -->
+
+            <div class="electrical-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="panel-label">
+                            ELECTRICAL CONDITION
+                        </span>
+
+                        <h3>
+                            Before Correction
+                        </h3>
+
+                    </div>
+
+                    <span class="condition-badge">
+                        ATTENTION
+                    </span>
+
+                </div>
+
+
+
+                <div class="metric-main">
+
+                    <span>
+                        POWER FACTOR
+                    </span>
+
+                    <strong id="powerFactorValue">
+    0.68
+</strong>
+
+                    <div class="metric-scale">
+
+                        <span
+                            style="width: 68%"
+                        ></span>
+
+                    </div>
+
+                    <p>
+                        Significant reactive demand
+                    </p>
+
+                </div>
+
+
+
+                <div class="metric-row">
+
+                    <div>
+
+                        <span>
+                            REAL POWER
+                        </span>
+
+                        <strong id="realPowerValue">
+                            50 kW
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            APPARENT POWER
+                        </span>
+
+                        <strong id="apparentPowerValue">
+                            73.5 kVA
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="metric-row">
+
+                    <div>
+
+                        <span>
+                            REACTIVE POWER
+                        </span>
+
+                        <strong id="reactivePowerValue">
+                            53.9 kVAr
+                        </strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SYSTEM STATE
+                        </span>
+
+                        <strong id="systemStateValue">
+                            UNCORRECTED
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="problem-message">
+
+                    <div class="problem-symbol">
+                        !
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Reactive power is present
+                        </strong>
+
+                        <p>
+                            The equipment needs more
+                            apparent power than the useful
+                            work alone requires.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    id="activateSheers"
+                    class="primary-button"
+                >
+
+                    Activate SHEERs
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Bottom Explanation -->
+
+        <div class="factory-explanation">
+
+            <span>
+                WHAT'S HAPPENING?
+            </span>
+
+            <p>
+
+                The machines are doing useful work,
+                but their inductive nature also creates
+                reactive power. This increases the
+                apparent power the electrical system
+                must supply.
+
+            </p>
 
         </div>
 
     </div>
 
+</section>
 
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-
-    <main>
-
+        <!-- =================================================
+             ACTIVE STATE
+             ================================================= -->
 
         <section
-            id="home"
-            class="hero-section"
+            id="activeState"
+            class="application-state"
         >
 
-            <div class="hero-content">
+            <div class="state-container">
 
-                <p class="hero-eyebrow">
-                    ENGINEERING THE NEXT POSSIBILITY
+                <p class="eyebrow">
+                    SHEERs ACTIVE
                 </p>
 
-
-                <h1>
-
-                    Intelligent
-
-                    <span>
-                        Electrical Technology.
-                    </span>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    SHEERs is an emerging electrical technology
-                    company building intelligent solutions that
-                    connect hardware, software and real-world
-                    engineering.
-
-                </p>
-
-
-                <div class="hero-actions">
-
-                    <a
-                        href="#products"
-                        class="primary-button"
-                    >
-                        Explore Our Products
-                    </a>
-
-                    <a
-                        href="#story"
-                        class="secondary-button"
-                    >
-                        Our Story
-                    </a>
-
-                </div>
-
-
-                <div class="hero-meta">
-
-                    <div>
-
-                        <strong>
-                            03
-                        </strong>
-
-                        <span>
-                            TECHNOLOGIES
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            2026
-                        </strong>
-
-                        <span>
-                            FOUNDED
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            01
-                        </strong>
-
-                        <span>
-                            VISION
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- HERO VISUAL -->
-
-            <div class="hero-visual">
-
-                <div class="hero-orbit hero-orbit-one"></div>
-
-                <div class="hero-orbit hero-orbit-two"></div>
-
-                <div class="hero-core">
-
-                    <img
-                        src="assets/sheers-logo.png"
-                        alt="SHEERs"
-                    >
-
-                </div>
-
-
-                <div class="hero-floating-card hero-card-top">
-
-                    <span>
-                        INTELLIGENCE
-                    </span>
-
-                    <strong>
-                        +++
-                    </strong>
-
-                </div>
-
-
-                <div class="hero-floating-card hero-card-bottom">
-
-                    <span>
-                        ENGINEERING
-                    </span>
-
-                    <strong>
-                        24 / 7
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             INTRODUCTION
-             ===================================================== -->
-
-        <section
-            class="intro-section"
-        >
-
-            <div class="section-label">
-
-                <span>
-                    01
-                </span>
-
-                <p>
-                    WHAT WE DO
-                </p>
-
-            </div>
-
-
-            <div class="intro-content">
 
                 <h2>
-
-                    From electrical
-                    <span>problems</span>
-
-                    to intelligent
-                    <span>solutions.</span>
-
+                    Intelligent correction enabled
                 </h2>
 
 
-                <p>
+                <p class="state-description">
 
-                    We combine electrical engineering,
-                    embedded systems, software and intelligent
-                    monitoring to create technologies designed
-                    for the challenges of tomorrow.
+                    SHEERs is actively monitoring and
+                    correcting the simulated electrical system.
 
                 </p>
 
-            </div>
 
-        </section>
+                <div class="state-card active-card">
 
+                    <div class="active-indicator">
 
+                        <span></span>
 
-        <!-- =====================================================
-             PRODUCTS
-             ===================================================== -->
+                        SYSTEM ACTIVE
 
-        <section
-            id="products"
-            class="products-section"
-        >
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="section-eyebrow">
-                        OUR TECHNOLOGIES
-                    </p>
-
-                    <h2>
-                        Built to solve.
-                    </h2>
-
-                </div>
-
-                <p>
-
-                    Our first generation of products focuses
-                    on electrical efficiency, intelligent
-                    measurement and AI-powered industrial
-                    monitoring.
-
-                </p>
-
-            </div>
-
-
-            <div class="products-grid">
-
-
-                <!-- PRODUCT 01 -->
-
-                <article
-                    class="product-card product-card-featured"
-                    data-search="power factor correction APFC electrical energy efficiency SHEERs"
-                >
-
-                    <div class="product-number">
-                        01
-                    </div>
-
-
-                    <div class="product-status">
-                        LIVE PRODUCT
-                    </div>
-
-
-                    <div class="product-icon">
-                        PF
                     </div>
 
 
                     <h3>
-                        Intelligent Power
-                        Factor Correction
+                        Power factor correction running
                     </h3>
 
 
                     <p>
-
-                        An IoT-enabled solid-state power factor
-                        correction system designed to monitor
-                        electrical conditions and intelligently
-                        improve power quality.
-
-                    </p>
-
-
-                    <div class="product-tags">
-
-                        <span>
-                            IoT
-                        </span>
-
-                        <span>
-                            ESP32
-                        </span>
-
-                        <span>
-                            APFC
-                        </span>
-
-                        <span>
-                            TELEMETRY
-                        </span>
-
-                    </div>
-
-
-                    <a
-                        href="#power-factor"
-                        class="product-link"
-                    >
-
-                        Explore Product
-
-                        <span>
-                            →
-                        </span>
-
-                    </a>
-
-                </article>
-
-
-
-                <!-- PRODUCT 02 -->
-
-                <article
-                    class="product-card"
-                    data-search="concrete maturity meter construction monitoring temperature maturity"
-                >
-
-                    <div class="product-number">
-                        02
-                    </div>
-
-
-                    <div class="product-status coming-soon">
-                        COMING SOON
-                    </div>
-
-
-                    <div class="product-icon">
-                        CM
-                    </div>
-
-
-                    <h3>
-                        Concrete Maturity
-                        Meter
-                    </h3>
-
-
-                    <p>
-
-                        A smart measurement technology designed
-                        to help monitor concrete maturity and
-                        support more informed construction
-                        decisions.
-
-                    </p>
-
-
-                    <div class="product-tags">
-
-                        <span>
-                            SENSING
-                        </span>
-
-                        <span>
-                            IoT
-                        </span>
-
-                        <span>
-                            MONITORING
-                        </span>
-
-                    </div>
-
-
-                    <span class="product-link disabled">
-
-                        Coming Soon
-
-                        <span>
-                            →
-                        </span>
-
-                    </span>
-
-                </article>
-
-
-
-                <!-- PRODUCT 03 -->
-
-                <article
-                    class="product-card"
-                    data-search="AI wind turbine blade crack detection vibration edge intelligence cloud analytics renewable energy"
-                >
-
-                    <div class="product-number">
-                        03
-                    </div>
-
-
-                    <div class="product-status coming-soon">
-                        COMING SOON
-                    </div>
-
-
-                    <div class="product-icon">
-                        AI
-                    </div>
-
-
-                    <h3>
-                        AI-Based Wind
-                        Turbine Blade Detection
-                    </h3>
-
-
-                    <p>
-
-                        Real-time blade crack detection using
-                        edge intelligence, vibration analysis
-                        and cloud analytics.
-
-                    </p>
-
-
-                    <div class="product-tags">
-
-                        <span>
-                            AI
-                        </span>
-
-                        <span>
-                            EDGE
-                        </span>
-
-                        <span>
-                            VIBRATION
-                        </span>
-
-                        <span>
-                            CLOUD
-                        </span>
-
-                    </div>
-
-
-                    <span class="product-link disabled">
-
-                        Coming Soon
-
-                        <span>
-                            →
-                        </span>
-
-                    </span>
-
-                </article>
-
-
-            </div>
-
-
-            <!-- PRODUCT FUTURE -->
-
-            <div class="future-products">
-
-                <span>
-                    AND WE ARE JUST GETTING STARTED.
-                </span>
-
-                <p>
-
-                    As SHEERs grows, so will our portfolio
-                    of intelligent electrical technologies.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             POWER FACTOR PRODUCT
-             ===================================================== -->
-
-        <section
-            id="power-factor"
-            class="product-detail-section"
-        >
-
-            <div class="product-detail-header">
-
-                <p class="section-eyebrow">
-                    SHEERs PRODUCT 01
-                </p>
-
-                <h2>
-                    Intelligent Power
-                    Factor Correction
-                </h2>
-
-                <p>
-
-                    Where electrical engineering meets
-                    intelligent monitoring.
-
-                </p>
-
-            </div>
-
-
-            <div class="product-detail-grid">
-
-
-                <div class="product-detail-copy">
-
-                    <span class="detail-label">
-                        THE PROBLEM
-                    </span>
-
-                    <h3>
-                        Electrical systems
-                        deserve better intelligence.
-                    </h3>
-
-                    <p>
-
-                        Industrial and commercial loads can
-                        create reactive power demand, reducing
-                        the effective utilization of electrical
-                        infrastructure.
-
-                    </p>
-
-
-                    <span class="detail-label">
-                        THE SHEERs APPROACH
-                    </span>
-
-                    <p>
-
-                        SHEERs combines sensing, intelligent
-                        control and solid-state switching to
-                        monitor and respond to changing
-                        electrical conditions.
-
-                    </p>
-
-
-                    <div class="detail-features">
-
-                        <div>
-
-                            <strong>
-                                IoT
-                            </strong>
-
-                            <span>
-                                Remote monitoring
-                            </span>
-
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                PF
-                            </strong>
-
-                            <span>
-                                Power factor intelligence
-                            </span>
-
-                        </div>
-
-                        <div>
-
-                            <strong>
-                                SS
-                            </strong>
-
-                            <span>
-                                Solid-state switching
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="product-detail-visual">
-
-                    <div class="technology-panel">
-
-                        <div class="technology-panel-top">
-
-                            <span>
-                                SHEERs POWER SYSTEM
-                            </span>
-
-                            <span class="live-dot">
-                                LIVE
-                            </span>
-
-                        </div>
-
-
-                        <div class="technology-display">
-
-                            <div>
-
-                                <span>
-                                    POWER FACTOR
-                                </span>
-
-                                <strong>
-                                    0.95
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    STATUS
-                                </span>
-
-                                <strong>
-                                    OPTIMIZED
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="technology-lines">
-
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="simulator-callout">
-
-                <div>
-
-                    <span class="section-eyebrow">
-                        EXPERIENCE THE TECHNOLOGY
-                    </span>
-
-                    <h3>
-                        See SHEERs in action.
-                    </h3>
-
-                    <p>
-
-                        Explore our interactive power factor
-                        correction simulation and see how
-                        electrical parameters change before
-                        and after correction.
-
+                        Electrical parameters are being
+                        continuously monitored.
                     </p>
 
                 </div>
 
 
-                <a
-                    href="#simulator"
+                <button
+                    id="showResults"
                     class="primary-button"
                 >
-                    Launch Simulator
-                </a>
+
+                    View Results
+
+                </button>
 
             </div>
 
@@ -925,1515 +584,104 @@
 
 
 
-        <!-- =====================================================
-             SIMULATOR
-             ===================================================== -->
+        <!-- =================================================
+             RESULTS STATE
+             ================================================= -->
 
         <section
-            id="simulator"
-            class="simulator-section"
+            id="resultsState"
+            class="application-state"
         >
 
-            <div class="simulator-header">
+            <div class="state-container">
 
-                <p class="section-eyebrow">
-                    INTERACTIVE EXPERIENCE
+                <p class="eyebrow">
+                    SIMULATION RESULTS
                 </p>
+
 
                 <h2>
-                    SHEERs Power
-                    <span>Simulation</span>
+                    SHEERs Performance
                 </h2>
 
-                <p>
 
-                    Understand the electrical problem.
-                    Activate SHEERs.
-                    See the correction.
+                <p class="state-description">
+
+                    Simulation completed successfully.
 
                 </p>
 
-            </div>
 
+                <div class="results-grid">
 
-            <!-- EXISTING SIMULATOR WILL BE RECONNECTED HERE -->
 
-            <div
-                id="simulatorApplication"
-                class="simulator-application"
-            >
-
-                <div
-                    id="welcomeState"
-                    class="application-state active-state"
-                >
-
-                    <div class="welcome-section">
-
-                        <p class="eyebrow">
-                            INTELLIGENT POWER MANAGEMENT
-                        </p>
-
-                        <h3>
-
-                            SHEERs
-
-                            <span>
-                                Simulation Platform
-                            </span>
-
-                        </h3>
-
-                        <p class="welcome-description">
-
-                            Explore how intelligent power factor
-                            correction can improve the electrical
-                            performance of a connected load.
-
-                        </p>
-
-                        <button
-                            id="startSimulation"
-                            class="primary-button"
-                        >
-                            Start Simulation
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <!-- RUNNING STATE -->
-
-                <section
-                    id="runningState"
-                    class="application-state"
-                >
-
-                    <div class="factory-container">
-
-                        <div class="factory-heading">
-
-                            <div>
-
-                                <p class="eyebrow">
-                                    INDUSTRIAL LOAD SIMULATION
-                                </p>
-
-                                <h3>
-                                    Factory Power System
-                                </h3>
-
-                                <p class="state-description">
-
-                                    Three common industrial loads
-                                    are operating simultaneously.
-                                    Watch how the electrical demand
-                                    changes.
-
-                                </p>
-
-                            </div>
-
-
-                            <div class="factory-status">
-
-                                <span class="factory-status-dot"></span>
-
-                                FACTORY ONLINE
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="factory-layout">
-
-
-                            <!-- LOADS -->
-
-                            <div class="loads-panel">
-
-                                <div class="panel-heading">
-
-                                    <div>
-
-                                        <span class="panel-label">
-                                            CONNECTED LOADS
-                                        </span>
-
-                                        <h3>
-                                            Industrial Equipment
-                                        </h3>
-
-                                    </div>
-
-                                    <span class="load-count">
-                                        03 LOADS
-                                    </span>
-
-                                </div>
-
-
-                                <div class="load-card">
-
-                                    <div class="load-icon">
-                                        M
-                                    </div>
-
-                                    <div class="load-information">
-
-                                        <div class="load-title-row">
-
-                                            <strong>
-                                                Induction Motor
-                                            </strong>
-
-                                            <span class="load-running">
-                                                RUNNING
-                                            </span>
-
-                                        </div>
-
-                                        <p>
-                                            Production drive
-                                        </p>
-
-                                        <div class="load-bar">
-
-                                            <span
-                                                style="width: 82%"
-                                            ></span>
-
-                                        </div>
-
-                                    </div>
-
-                                    <strong class="load-power">
-                                        22 kW
-                                    </strong>
-
-                                </div>
-
-
-                                <div class="load-card">
-
-                                    <div class="load-icon">
-                                        C
-                                    </div>
-
-                                    <div class="load-information">
-
-                                        <div class="load-title-row">
-
-                                            <strong>
-                                                Air Compressor
-                                            </strong>
-
-                                            <span class="load-running">
-                                                RUNNING
-                                            </span>
-
-                                        </div>
-
-                                        <p>
-                                            Pneumatic system
-                                        </p>
-
-                                        <div class="load-bar">
-
-                                            <span
-                                                style="width: 68%"
-                                            ></span>
-
-                                        </div>
-
-                                    </div>
-
-                                    <strong class="load-power">
-                                        18 kW
-                                    </strong>
-
-                                </div>
-
-
-                                <div class="load-card">
-
-                                    <div class="load-icon">
-                                        P
-                                    </div>
-
-                                    <div class="load-information">
-
-                                        <div class="load-title-row">
-
-                                            <strong>
-                                                Industrial Pump
-                                            </strong>
-
-                                            <span class="load-running">
-                                                RUNNING
-                                            </span>
-
-                                        </div>
-
-                                        <p>
-                                            Cooling & circulation
-                                        </p>
-
-                                        <div class="load-bar">
-
-                                            <span
-                                                style="width: 56%"
-                                            ></span>
-
-                                        </div>
-
-                                    </div>
-
-                                    <strong class="load-power">
-                                        10 kW
-                                    </strong>
-
-                                </div>
-
-                            </div>
-
-
-                            <!-- ELECTRICAL PANEL -->
-
-                            <div class="electrical-panel">
-
-                                <div class="panel-heading">
-
-                                    <div>
-
-                                        <span class="panel-label">
-                                            ELECTRICAL CONDITION
-                                        </span>
-
-                                        <h3>
-                                            Before Correction
-                                        </h3>
-
-                                    </div>
-
-                                    <span class="condition-badge">
-                                        ATTENTION
-                                    </span>
-
-                                </div>
-
-
-                                <div class="metric-main">
-
-                                    <span>
-                                        POWER FACTOR
-                                    </span>
-
-                                    <strong id="powerFactorValue">
-                                        0.68
-                                    </strong>
-
-                                    <div class="metric-scale">
-
-                                        <span
-                                            style="width: 68%"
-                                        ></span>
-
-                                    </div>
-
-                                    <p>
-                                        Significant reactive demand
-                                    </p>
-
-                                </div>
-
-
-                                <div class="metric-row">
-
-                                    <div>
-
-                                        <span>
-                                            REAL POWER
-                                        </span>
-
-                                        <strong id="realPowerValue">
-                                            50 kW
-                                        </strong>
-
-                                    </div>
-
-                                    <div>
-
-                                        <span>
-                                            APPARENT POWER
-                                        </span>
-
-                                        <strong id="apparentPowerValue">
-                                            73.5 kVA
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="metric-row">
-
-                                    <div>
-
-                                        <span>
-                                            REACTIVE POWER
-                                        </span>
-
-                                        <strong id="reactivePowerValue">
-                                            53.9 kVAr
-                                        </strong>
-
-                                    </div>
-
-                                    <div>
-
-                                        <span>
-                                            SYSTEM STATE
-                                        </span>
-
-                                        <strong id="systemStateValue">
-                                            UNCORRECTED
-                                        </strong>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="problem-message">
-
-                                    <div class="problem-symbol">
-                                        !
-                                    </div>
-
-                                    <div>
-
-                                        <strong>
-                                            Reactive power is present
-                                        </strong>
-
-                                        <p>
-
-                                            The equipment needs more
-                                            apparent power than the
-                                            useful work alone requires.
-
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-
-                                <button
-                                    id="activateSheers"
-                                    class="primary-button"
-                                >
-                                    Activate SHEERs
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="factory-explanation">
-
-                            <span>
-                                WHAT'S HAPPENING?
-                            </span>
-
-                            <p>
-
-                                The machines are doing useful work,
-                                but their inductive nature also
-                                creates reactive power. This
-                                increases the apparent power the
-                                electrical system must supply.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- ACTIVE STATE -->
-
-                <section
-                    id="activeState"
-                    class="application-state"
-                >
-
-                    <div class="state-container">
-
-                        <p class="eyebrow">
-                            SHEERs ACTIVE
-                        </p>
-
-                        <h3>
-                            Intelligent correction enabled
-                        </h3>
-
-                        <p class="state-description">
-
-                            SHEERs is actively monitoring and
-                            correcting the simulated electrical
-                            system.
-
-                        </p>
-
-
-                        <div class="state-card active-card">
-
-                            <div class="active-indicator">
-
-                                <span></span>
-
-                                SYSTEM ACTIVE
-
-                            </div>
-
-                            <h3>
-                                Power factor correction running
-                            </h3>
-
-                            <p>
-                                Electrical parameters are being
-                                continuously monitored.
-                            </p>
-
-                        </div>
-
-
-                        <button
-                            id="showResults"
-                            class="primary-button"
-                        >
-                            View Results
-                        </button>
-
-                    </div>
-
-                </section>
-
-
-                <!-- RESULTS -->
-
-                <section
-                    id="resultsState"
-                    class="application-state"
-                >
-
-                    <div class="state-container">
-
-                        <p class="eyebrow">
-                            SIMULATION RESULTS
-                        </p>
-
-                        <h3>
-                            SHEERs Performance
-                        </h3>
-
-                        <p class="state-description">
-                            Simulation completed successfully.
-                        </p>
-
-
-                        <div class="results-grid">
-
-                            <div class="result-card">
-
-                                <span>
-                                    POWER FACTOR
-                                </span>
-
-                                <strong>
-                                    0.95
-                                </strong>
-
-                            </div>
-
-
-                            <div class="result-card">
-
-                                <span>
-                                    APPARENT POWER
-                                </span>
-
-                                <strong>
-                                    52.6 kVA
-                                </strong>
-
-                            </div>
-
-
-                            <div class="result-card">
-
-                                <span>
-                                    REACTIVE POWER
-                                </span>
-
-                                <strong>
-                                    16.4 kVAr
-                                </strong>
-
-                            </div>
-
-
-                            <div class="result-card">
-
-                                <span>
-                                    SYSTEM STATUS
-                                </span>
-
-                                <strong>
-                                    OPTIMIZED
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <button
-                            id="restartSimulation"
-                            class="secondary-button"
-                        >
-                            Run Again
-                        </button>
-
-                    </div>
-
-                </section>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             STORY
-             ===================================================== -->
-
-        <section
-            id="story"
-            class="story-section"
-        >
-
-            <div class="section-label">
-
-                <span>
-                    02
-                </span>
-
-                <p>
-                    OUR STORY
-                </p>
-
-            </div>
-
-
-            <div class="story-heading">
-
-                <p class="section-eyebrow">
-                    IT STARTED WITH A CLASSROOM.
-                </p>
-
-                <h2>
-                    Three people.
-                    <span>One journey.</span>
-                </h2>
-
-                <p>
-
-                    SHEERs wasn't born in a boardroom.
-                    It started in a classroom, through
-                    friendship, mentorship, projects and
-                    a shared desire to build something real.
-
-                </p>
-
-            </div>
-
-
-            <div class="story-timeline">
-
-
-                <!-- 2023 -->
-
-                <div class="story-event">
-
-                    <div class="story-year">
-                        2023
-                    </div>
-
-                    <div class="story-marker"></div>
-
-                    <div class="story-event-content">
+                    <div class="result-card">
 
                         <span>
-                            THE BEGINNING
-                        </span>
-
-                        <h3>
-                            First day. First connection.
-                        </h3>
-
-                        <p>
-
-                            Sairaj Kharat and Harshvardhan Khade
-                            met on their first day of college at
-                            Maharashtra Institute of Technology,
-                            Chhatrapati Sambhajinagar.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FIRST LECTURE -->
-
-                <div class="story-event">
-
-                    <div class="story-year">
-                        AUG
-                    </div>
-
-                    <div class="story-marker"></div>
-
-                    <div class="story-event-content">
-
-                        <span>
-                            FIRST LECTURE
-                        </span>
-
-                        <h3>
-                            PPL — Principles of Programming Language
-                        </h3>
-
-                        <p>
-
-                            Their very first lecture was C Programming,
-                            taught by Prof. Roopali Palwe.
-
-                            That classroom would eventually become
-                            the starting point of a much bigger journey.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- COLLABORATION -->
-
-                <div class="story-event">
-
-                    <div class="story-year">
-                        2023 — 26
-                    </div>
-
-                    <div class="story-marker"></div>
-
-                    <div class="story-event-content">
-
-                        <span>
-                            BUILDING TOGETHER
-                        </span>
-
-                        <h3>
-                            Projects. Competitions. Experience.
-                        </h3>
-
-                        <p>
-
-                            Sairaj brought his programming and
-                            software foundation.
-
-                            Harshvardhan brought his strong hardware
-                            and electronics foundation.
-
-                            Roopali brought mentorship, guidance
-                            and strategy.
-
-                            Together they worked on projects and
-                            competitions across their college journey.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- AUTONATION -->
-
-                <div class="story-event">
-
-                    <div class="story-year">
-                        JUL 2026
-                    </div>
-
-                    <div class="story-marker"></div>
-
-                    <div class="story-event-content">
-
-                        <span>
-                            THE IDEA
-                        </span>
-
-                        <h3>
-                            Autonation Expo 2026
-                        </h3>
-
-                        <p>
-
-                            During a visit to Autonation Expo 2026
-                            in Goregaon, Mumbai, Sairaj encountered
-                            a team demonstrating a power-factor-related
-                            device.
-
-                            The thought emerged:
-
-                        </p>
-
-                        <blockquote>
-                            "Why can't we build our own?"
-                        </blockquote>
-
-                    </div>
-
-                </div>
-
-
-                <!-- BIRTH -->
-
-                <div class="story-event story-event-final">
-
-                    <div class="story-year">
-                        22 AUG
-                    </div>
-
-                    <div class="story-marker"></div>
-
-                    <div class="story-event-content">
-
-                        <span>
-                            SHEERs
-                        </span>
-
-                        <h3>
-                            And SHEERs was born.
-                        </h3>
-
-                        <p>
-
-                            Sairaj discussed the idea with
-                            Prof. Roopali Palwe.
-
-                            On 22 August 2026, the journey that
-                            began inside a classroom became
-                            something new:
-
-                        </p>
-
-                        <strong class="story-final-line">
-                            An engineering venture built to solve
-                            real-world problems.
-
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             TEAM
-             ===================================================== -->
-
-        <section
-            id="team"
-            class="team-section"
-        >
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="section-eyebrow">
-                        THE PEOPLE BEHIND SHEERs
-                    </p>
-
-                    <h2>
-                        Built by people
-                        who build together.
-                    </h2>
-
-                </div>
-
-                <p>
-
-                    Three different strengths.
-                    One shared vision.
-
-                </p>
-
-            </div>
-
-
-            <div class="team-grid">
-
-
-                <!-- SAIRAJ -->
-
-                <article class="team-card">
-
-                    <div class="team-card-number">
-                        01
-                    </div>
-
-                    <div class="team-avatar">
-                        SK
-                    </div>
-
-                    <span class="team-role">
-                        COO
-                    </span>
-
-                    <h3>
-                        Sairaj Kharat
-                    </h3>
-
-                    <p>
-
-                        Software, programming and product
-                        technology.
-
-                    </p>
-
-                    <div class="team-focus">
-
-                        <span>
-                            SOFTWARE
-                        </span>
-
-                        <span>
-                            IoT
-                        </span>
-
-                        <span>
-                            PRODUCT
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- HARSHVARDHAN -->
-
-                <article class="team-card">
-
-                    <div class="team-card-number">
-                        02
-                    </div>
-
-                    <div class="team-avatar">
-                        HK
-                    </div>
-
-                    <span class="team-role">
-                        CTO
-                    </span>
-
-                    <h3>
-                        Harshvardhan Khade
-                    </h3>
-
-                    <p>
-
-                        Hardware, electronics and
-                        engineering systems.
-
-                    </p>
-
-                    <div class="team-focus">
-
-                        <span>
-                            HARDWARE
-                        </span>
-
-                        <span>
-                            ELECTRONICS
-                        </span>
-
-                        <span>
-                            SYSTEMS
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ROOPALI -->
-
-                <article class="team-card">
-
-                    <div class="team-card-number">
-                        03
-                    </div>
-
-                    <div class="team-avatar">
-                        RP
-                    </div>
-
-                    <span class="team-role">
-                        CEO
-                    </span>
-
-                    <h3>
-                        Roopali Palwe
-                    </h3>
-
-                    <p>
-
-                        Strategy, mentorship and the
-                        guidance behind the journey.
-
-                    </p>
-
-                    <div class="team-focus">
-
-                        <span>
-                            STRATEGY
-                        </span>
-
-                        <span>
-                            MENTORSHIP
-                        </span>
-
-                        <span>
-                            VISION
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-
-            <div class="team-statement">
-
-                <p>
-                    <span>
-                        SOFTWARE
-                    </span>
-
-                    +
-
-                    <span>
-                        HARDWARE
-                    </span>
-
-                    +
-
-                    <span>
-                        GUIDANCE
-                    </span>
-
-                    =
-
-                    <strong>
-                        SHEERs
-                    </strong>
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             ACHIEVEMENTS
-             ===================================================== -->
-
-        <section
-            id="achievements"
-            class="achievements-section"
-        >
-
-            <div class="section-label">
-
-                <span>
-                    03
-                </span>
-
-                <p>
-                    MILESTONES
-                </p>
-
-            </div>
-
-
-            <div class="achievement-heading">
-
-                <p class="section-eyebrow">
-                    THE JOURNEY HAS BEGUN
-                </p>
-
-                <h2>
-                    Small beginning.
-                    <span>Big ambition.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="achievement-list">
-
-
-                <!-- FOUNDING -->
-
-                <article class="achievement-item">
-
-                    <div class="achievement-date">
-                        22.08.2026
-                    </div>
-
-                    <div class="achievement-content">
-
-                        <span>
-                            FOUNDATION
-                        </span>
-
-                        <h3>
-                            SHEERs Founded
-                        </h3>
-
-                        <p>
-
-                            SHEERs officially began its journey
-                            as an emerging electrical technology
-                            venture.
-
-                        </p>
-
-                    </div>
-
-                    <div class="achievement-mark">
-                        01
-                    </div>
-
-                </article>
-
-
-                <!-- FUND MY CRAZY -->
-
-                <article class="achievement-item achievement-highlight">
-
-                    <div class="achievement-date">
-                        2026
-                    </div>
-
-                    <div class="achievement-content">
-
-                        <span>
-                            FUND MY CRAZY
-                        </span>
-
-                        <h3>
-                            Build Night Champion
-                        </h3>
-
-                        <p>
-
-                            SHEERs emerged as the winner among
-                            20 startup ideas at Fund My Crazy:
-                            Build Night Champion.
-
-                        </p>
-
-                        <div class="achievement-awards">
-
-                            <span>
-                                ₹10 LAKH CASH PRIZE
-                            </span>
-
-                            <span>
-                                GOOGLE PIXEL 11 NOMINATION
-                            </span>
-
-                            <span>
-                                CERTIFICATE OF AWARD
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="achievement-mark">
-                        ★
-                    </div>
-
-                </article>
-
-
-                <!-- UPCOMING -->
-
-                <article class="achievement-item">
-
-                    <div class="achievement-date">
-                        03.09.2026
-                    </div>
-
-                    <div class="achievement-content">
-
-                        <span>
-                            UPCOMING
-                        </span>
-
-                        <h3>
-                            PolyExplore IdeaPitch 2026
-                        </h3>
-
-                        <p>
-
-                            SHEERs will represent its startup
-                            at the Plastic & Polymer Department's
-                            IdeaPitch event.
-
-                        </p>
-
-                    </div>
-
-                    <div class="achievement-mark">
-                        03
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             GALLERY
-             ===================================================== -->
-
-        <section
-            id="gallery"
-            class="gallery-section"
-        >
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="section-eyebrow">
-                        OUR JOURNEY
-                    </p>
-
-                    <h2>
-                        Moments that
-                        made SHEERs.
-                    </h2>
-
-                </div>
-
-                <p>
-
-                    A growing collection of the people,
-                    places, projects and moments behind
-                    the journey.
-
-                </p>
-
-            </div>
-
-
-            <div class="gallery-grid">
-
-
-                <div class="gallery-card gallery-large">
-
-                    <div class="gallery-placeholder">
-
-                        <span>
-                            YOUR PHOTO
+                            POWER FACTOR
                         </span>
 
                         <strong>
-                            SHEERs TEAM
+                            0.95
                         </strong>
 
                     </div>
 
-                </div>
 
-
-                <div class="gallery-card">
-
-                    <div class="gallery-placeholder">
+                    <div class="result-card">
 
                         <span>
-                            YOUR PHOTO
+                            APPARENT POWER
                         </span>
 
                         <strong>
-                            PROJECTS
+                            52.6 kVA
                         </strong>
 
                     </div>
 
-                </div>
 
-
-                <div class="gallery-card">
-
-                    <div class="gallery-placeholder">
+                    <div class="result-card">
 
                         <span>
-                            YOUR PHOTO
+                            REACTIVE POWER
                         </span>
 
                         <strong>
-                            EVENTS
+                            16.4 kVAr
                         </strong>
 
                     </div>
 
-                </div>
 
-
-                <div class="gallery-card">
-
-                    <div class="gallery-placeholder">
+                    <div class="result-card">
 
                         <span>
-                            YOUR PHOTO
+                            SYSTEM STATUS
                         </span>
 
                         <strong>
-                            PROTOTYPES
+                            OPTIMIZED
                         </strong>
 
                     </div>
 
-                </div>
-
-
-                <div class="gallery-card">
-
-                    <div class="gallery-placeholder">
-
-                        <span>
-                            YOUR PHOTO
-                        </span>
-
-                        <strong>
-                            ACHIEVEMENTS
-                        </strong>
-
-                    </div>
 
                 </div>
 
 
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             FUTURE
-             ===================================================== -->
-
-        <section class="future-section">
-
-            <div class="future-inner">
-
-                <p class="section-eyebrow">
-                    THE ROAD AHEAD
-                </p>
-
-                <h2>
-
-                    This is only
-                    <span>the beginning.</span>
-
-                </h2>
-
-                <p>
-
-                    Today, we're building intelligent
-                    electrical technologies.
-
-                    Tomorrow, we're building much more.
-
-                </p>
-
-
-                <div class="future-line">
-
-                    <span>
-                        PRODUCT 01
-                    </span>
-
-                    <span>
-                        PRODUCT 02
-                    </span>
-
-                    <span>
-                        PRODUCT 03
-                    </span>
-
-                    <span>
-                        MORE TO COME
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             CONTACT
-             ===================================================== -->
-
-        <section
-            id="contact"
-            class="contact-section"
-        >
-
-            <div class="contact-heading">
-
-                <p class="section-eyebrow">
-                    CONTACT SHEERs
-                </p>
-
-                <h2>
-
-                    Let's build
-                    <span>what's next.</span>
-
-                </h2>
-
-                <p>
-
-                    Have an idea, collaboration opportunity,
-                    technical question or simply want to know
-                    more about SHEERs?
-
-                    We'd love to hear from you.
-
-                </p>
-
-            </div>
-
-
-            <div class="contact-grid">
-
-
-                <div class="contact-card">
-
-                    <span>
-                        GENERAL
-                    </span>
-
-                    <h3>
-                        Get in touch
-                    </h3>
-
-                    <a href="mailto:contact@sheers.in">
-                        contact@sheers.in
-                    </a>
-
-                </div>
-
-
-                <div class="contact-card">
-
-                    <span>
-                        COMPANY
-                    </span>
-
-                    <h3>
-                        SHEERs
-                    </h3>
-
-                    <p>
-                        Intelligent Electrical Technologies
-                    </p>
-
-                </div>
-
-
-                <div class="contact-card">
-
-                    <span>
-                        WEB
-                    </span>
-
-                    <h3>
-                        sheers.in
-                    </h3>
-
-                    <a href="#home">
-                        Visit SHEERs
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="contact-cta">
-
-                <a
-                    href="mailto:contact@sheers.in"
-                    class="primary-button"
+                <button
+                    id="restartSimulation"
+                    class="secondary-button"
                 >
-                    Contact SHEERs
-                </a>
+
+                    Run Again
+
+                </button>
 
             </div>
 
         </section>
-
 
     </main>
 
@@ -2443,74 +691,19 @@
          FOOTER
          ===================================================== -->
 
-    <footer class="site-footer">
+    <footer class="app-footer">
 
-        <div class="footer-main">
+        <span>
+            SHEERs
+        </span>
 
-            <div class="footer-brand">
+        <span>
+            Intelligent Power Management
+        </span>
 
-                <img
-                    src="assets/sheers-logo.png"
-                    alt="SHEERs Logo"
-                >
-
-                <div>
-
-                    <strong>
-                        SHEERs
-                    </strong>
-
-                    <p>
-                        Power Smarter. Save Better.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#products">
-                    Products
-                </a>
-
-                <a href="#story">
-                    Story
-                </a>
-
-                <a href="#team">
-                    Team
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 SHEERs
-            </span>
-
-            <span>
-                Intelligent Electrical Technologies
-            </span>
-
-            <span>
-                Built with purpose.
-            </span>
-
-        </div>
+        <span>
+            DEVELOPMENT BUILD v0.1
+        </span>
 
     </footer>
 
