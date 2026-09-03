@@ -5122,3 +5122,1337 @@ body {
     }
 
 }
+/* =========================================================
+   SHEERs — FINAL MOBILE POLISH
+   ---------------------------------------------------------
+   Mobile-only improvements.
+   Desktop layout remains unchanged.
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =====================================================
+       GLOBAL MOBILE
+       ===================================================== */
+
+    html,
+    body {
+
+        overflow: hidden;
+
+    }
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .top-bar {
+
+        height: 82px;
+
+        padding: 16px 20px;
+
+        align-items: center;
+
+    }
+
+
+    .brand {
+
+        gap: 9px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .brand-text {
+
+        gap: 2px;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 18px;
+
+        letter-spacing: .12em;
+
+    }
+
+
+    .brand-tagline {
+
+        font-size: 6px;
+
+        letter-spacing: .14em;
+
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
+    .navigation {
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 20px;
+
+        right: 20px;
+
+        margin-left: 0;
+
+        padding: 9px 12px;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 17px;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+        border:
+            1px solid
+            rgba(143,232,255,.13);
+
+        border-radius: 999px;
+
+        background:
+            rgba(3,18,42,.28);
+
+        backdrop-filter: blur(14px);
+
+        scrollbar-width: none;
+
+    }
+
+
+    .navigation::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .navigation a {
+
+        flex: 0 0 auto;
+
+        font-size: 7px;
+
+        letter-spacing: .10em;
+
+    }
+
+
+    .navigation a.active::after {
+
+        bottom: -7px;
+
+        height: 2px;
+
+    }
+
+
+    /* =====================================================
+       SYSTEM STATUS
+       ===================================================== */
+
+    .system-status {
+
+        position: absolute;
+
+        top: 18px;
+
+        right: 20px;
+
+        padding: 7px 10px;
+
+        gap: 6px;
+
+        font-size: 6px;
+
+        letter-spacing: .10em;
+
+    }
+
+
+    .status-dot {
+
+        width: 6px;
+
+        height: 6px;
+
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero-copy {
+
+        left: 20px;
+
+        top: 48%;
+
+        width: calc(100% - 40px);
+
+        transform: translateY(-35%);
+
+    }
+
+
+    .eyebrow {
+
+        font-size: 8px;
+
+        letter-spacing: .16em;
+
+    }
+
+
+    .eyebrow-line {
+
+        width: 38px;
+
+        height: 2px;
+
+        margin-top: 12px;
+
+    }
+
+
+    .hero-copy h1 {
+
+        margin-top: 17px;
+
+        font-size: clamp(39px, 11vw, 54px);
+
+        line-height: .98;
+
+        letter-spacing: -.055em;
+
+    }
+
+
+    .hero-copy p {
+
+        max-width: 390px;
+
+        margin-top: 19px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .buttons {
+
+        gap: 10px;
+
+        margin-top: 22px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        height: 44px;
+
+        padding: 0 16px;
+
+        border-radius: 7px;
+
+        font-size: 8px;
+
+        letter-spacing: .11em;
+
+    }
+
+
+    /* =====================================================
+       SYSTEM DATA
+       ===================================================== */
+
+    .system-data {
+
+        margin-top: 27px;
+
+        gap: 0;
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .data-block {
+
+        min-width: 0;
+
+        gap: 7px;
+
+        flex: 1;
+
+    }
+
+
+    .data-icon {
+
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 13px;
+
+    }
+
+
+    .data-block span {
+
+        font-size: 6px;
+
+        letter-spacing: .12em;
+
+        margin-bottom: 3px;
+
+    }
+
+
+    .data-block strong {
+
+        font-size: 7px;
+
+        letter-spacing: .04em;
+
+    }
+
+
+    .data-divider {
+
+        width: 1px;
+
+        height: 30px;
+
+        margin: 0 10px;
+
+    }
+
+
+    /* =====================================================
+       3D PRODUCT INFORMATION
+       -----------------------------------------------------
+       Hide this on small screens because it competes with
+       the main hero content.
+       ===================================================== */
+
+    .product-info {
+
+        display: none;
+
+    }
+
+
+    /* =====================================================
+       BOTTOM ELEMENTS
+       ===================================================== */
+
+    .bottom-left {
+
+        display: none;
+
+    }
+
+
+    .phase-label {
+
+        right: 20px;
+
+        bottom: 18px;
+
+        gap: 8px;
+
+        font-size: 6px;
+
+        letter-spacing: .13em;
+
+    }
+
+
+    .phase-line {
+
+        width: 25px;
+
+        height: 1px;
+
+    }
+
+
+    .scroll-indicator {
+
+        bottom: 16px;
+
+        font-size: 6px;
+
+        letter-spacing: .16em;
+
+        gap: 4px;
+
+    }
+
+
+    .scroll-arrow {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .top-bar {
+
+        padding:
+            14px
+            15px;
+
+    }
+
+
+    .brand-logo {
+
+        width: 34px;
+
+        height: 34px;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 16px;
+
+    }
+
+
+    .brand-tagline {
+
+        font-size: 5px;
+
+    }
+
+
+    .system-status {
+
+        top: 16px;
+
+        right: 15px;
+
+        padding:
+            6px
+            8px;
+
+        font-size: 5px;
+
+    }
+
+
+    .navigation {
+
+        left: 15px;
+
+        right: 15px;
+
+        top: 70px;
+
+        gap: 14px;
+
+        padding:
+            8px
+            10px;
+
+    }
+
+
+    .navigation a {
+
+        font-size: 6px;
+
+    }
+
+
+    .hero-copy {
+
+        left: 15px;
+
+        width: calc(100% - 30px);
+
+        top: 47%;
+
+    }
+
+
+    .hero-copy h1 {
+
+        font-size: 37px;
+
+        line-height: .97;
+
+    }
+
+
+    .hero-copy p {
+
+        margin-top: 16px;
+
+        font-size: 11px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .buttons {
+
+        margin-top: 19px;
+
+        gap: 8px;
+
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        height: 42px;
+
+        padding:
+            0
+            13px;
+
+        font-size: 7px;
+
+    }
+
+
+    .system-data {
+
+        margin-top: 23px;
+
+    }
+
+
+    .data-block {
+
+        gap: 5px;
+
+    }
+
+
+    .data-icon {
+
+        width: 27px;
+
+        height: 27px;
+
+        font-size: 11px;
+
+    }
+
+
+    .data-block span {
+
+        font-size: 5px;
+
+    }
+
+
+    .data-block strong {
+
+        font-size: 6px;
+
+    }
+
+
+    .data-divider {
+
+        height: 27px;
+
+        margin:
+            0
+            7px;
+
+    }
+
+
+    .phase-label {
+
+        right: 15px;
+
+        bottom: 14px;
+
+        font-size: 5px;
+
+    }
+
+
+    .scroll-indicator {
+
+        bottom: 12px;
+
+    }
+
+
+    .scroll-arrow {
+
+        font-size: 17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE STORY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .story-section {
+
+        padding:
+            105px
+            20px
+            65px;
+
+    }
+
+
+    .story-shell {
+
+        width: 100%;
+
+    }
+
+
+    .story-heading {
+
+        margin:
+            0 auto
+            48px;
+
+    }
+
+
+    .story-heading h2 {
+
+        font-size: clamp(37px, 11vw, 48px);
+
+    }
+
+
+    .story-intro {
+
+        font-size: 12px;
+
+        line-height: 1.75;
+
+    }
+
+
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+
+        width: 100%;
+
+        margin-left: 0;
+
+        padding-left: 30px;
+
+        padding-right: 0;
+
+        padding-bottom: 38px;
+
+    }
+
+
+    .timeline::before {
+
+        left: 5px;
+
+    }
+
+
+    .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot {
+
+        left: -1px;
+
+        right: auto;
+
+        width: 12px;
+
+        height: 12px;
+
+    }
+
+
+    .timeline-card {
+
+        padding: 19px;
+
+        border-radius: 11px;
+
+    }
+
+
+    .timeline-card h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .timeline-card p {
+
+        font-size: 11px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .timeline-year {
+
+        font-size: 8px;
+
+    }
+
+
+    .story-end {
+
+        padding-top: 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PRODUCTS
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .products-section {
+
+        padding:
+            105px
+            20px
+            65px;
+
+    }
+
+
+    .products-shell {
+
+        width: 100%;
+
+    }
+
+
+    .products-heading {
+
+        margin-bottom: 38px;
+
+    }
+
+
+    .products-heading h2 {
+
+        font-size: clamp(37px, 11vw, 48px);
+
+    }
+
+
+    .products-intro {
+
+        margin-top: 18px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+    }
+
+
+    .product-card {
+
+        min-height: auto;
+
+        padding: 21px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .product-card-content {
+
+        margin-top: 32px;
+
+    }
+
+
+    .product-number {
+
+        font-size: 27px;
+
+    }
+
+
+    .product-card h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .product-card p {
+
+        font-size: 11px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .product-card-footer {
+
+        padding-top: 26px;
+
+    }
+
+
+    .product-tech {
+
+        gap: 5px;
+
+    }
+
+
+    .product-tech span {
+
+        padding:
+            6px
+            7px;
+
+        font-size: 6px;
+
+    }
+
+
+    .product-explore {
+
+        min-height: 43px;
+
+        margin-top: 16px;
+
+        font-size: 8px;
+
+    }
+
+
+    .products-end {
+
+        padding-top: 55px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE CONTACT
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact-section {
+
+        padding:
+            105px
+            20px
+            65px;
+
+    }
+
+
+    .contact-heading {
+
+        margin-bottom: 38px;
+
+    }
+
+
+    .contact-heading h2 {
+
+        font-size: clamp(37px, 11vw, 48px);
+
+        line-height: 1.04;
+
+    }
+
+
+    .contact-heading p {
+
+        margin-top: 18px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        max-width: 100%;
+
+    }
+
+
+    .contact-card {
+
+        padding:
+            21px
+            18px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .contact-card h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .contact-details {
+
+        margin-top: 17px;
+
+        gap: 9px;
+
+    }
+
+
+    .contact-detail {
+
+        font-size: 9px;
+
+    }
+
+
+    .contact-detail-icon {
+
+        width: 29px;
+
+        height: 29px;
+
+        flex-basis: 29px;
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE APFC EXPERIENCE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .apfc-experience {
+
+        display: flex;
+
+        flex-direction: column;
+
+        height: 100vh;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+    }
+
+
+    .apfc-info {
+
+        min-height: auto;
+
+        padding:
+            105px
+            22px
+            25px;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .apfc-info h2 {
+
+        font-size: clamp(38px, 10vw, 48px);
+
+        line-height: .98;
+
+    }
+
+
+    .apfc-intro {
+
+        margin-top: 18px;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .apfc-specs {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+        margin-top: 23px;
+
+    }
+
+
+    .apfc-spec {
+
+        padding: 12px;
+
+        border-radius: 8px;
+
+    }
+
+
+    .apfc-spec-label {
+
+        font-size: 6px;
+
+    }
+
+
+    .apfc-spec-value {
+
+        margin-top: 6px;
+
+        font-size: 10px;
+
+    }
+
+
+    .apfc-tags {
+
+        gap: 5px;
+
+        margin-top: 17px;
+
+    }
+
+
+    .apfc-tag {
+
+        padding:
+            6px
+            8px;
+
+        font-size: 6px;
+
+    }
+
+
+    .apfc-visual {
+
+        min-height: 55vh;
+
+        height: 55vh;
+
+        flex: 0 0 55vh;
+
+    }
+
+
+    .apfc-product-frame {
+
+        width: 100%;
+
+        height: 100%;
+
+    }
+
+
+    .apfc-product-image {
+
+        width: 88%;
+
+        max-width: 500px;
+
+    }
+
+
+    .apfc-visual-label {
+
+        right: 20px;
+
+        bottom: 18px;
+
+        padding:
+            9px
+            12px;
+
+    }
+
+
+    .apfc-visual-label span {
+
+        font-size: 6px;
+
+    }
+
+
+    .apfc-visual-label strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .apfc-back {
+
+        margin:
+            0
+            22px
+            40px;
+
+        padding:
+            10px
+            0;
+
+        font-size: 7px;
+
+    }
+
+}
+
+
+/* =========================================================
+   APFC — SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .apfc-info {
+
+        padding:
+            95px
+            17px
+            20px;
+
+    }
+
+
+    .apfc-info h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .apfc-intro {
+
+        font-size: 11px;
+
+    }
+
+
+    .apfc-specs {
+
+        gap: 7px;
+
+    }
+
+
+    .apfc-spec {
+
+        padding: 10px;
+
+    }
+
+
+    .apfc-spec-value {
+
+        font-size: 9px;
+
+    }
+
+
+    .apfc-visual {
+
+        min-height: 48vh;
+
+        height: 48vh;
+
+        flex-basis: 48vh;
+
+    }
+
+
+    .apfc-product-image {
+
+        width: 94%;
+
+    }
+
+
+    .apfc-visual-label {
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+
+    .apfc-back {
+
+        margin-left: 17px;
+
+        margin-bottom: 30px;
+
+    }
+
+}
+
+
+/* =========================================================
+   INSIDE SHEERs SIMULATION — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .inside-simulation-status {
+
+        right: 18px;
+
+        bottom: 65px;
+
+        width: 185px;
+
+        padding: 13px;
+
+    }
+
+
+    .inside-pf-display strong {
+
+        font-size: 24px;
+
+    }
+
+
+    .inside-simulation-title {
+
+        font-size: 11px;
+
+    }
+
+
+    .inside-simulation-state {
+
+        font-size: 6px;
+
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .inside-simulation-status {
+
+        right: 15px;
+
+        bottom: 52px;
+
+        width: 170px;
+
+        padding: 11px;
+
+    }
+
+
+    .inside-pf-display strong {
+
+        font-size: 21px;
+
+    }
+
+}
